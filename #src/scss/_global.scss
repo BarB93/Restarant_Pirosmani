@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    font-size: 14px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    // max-width: 100%;
+    display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+._rub {
+    &::after {
+        content: " ₽";
+    }
+}
+
+._rub-kg {
+    &::after {
+        content: " ₽/кг";
+    }
+}
+
+// стили для звездного рейтинга
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    &[data-rating-total="1"] .rating__item:nth-child(n + 5),
+    &[data-rating-total="2"] .rating__item:nth-child(n + 4),
+    &[data-rating-total="3"] .rating__item:nth-child(n + 3),
+    &[data-rating-total="4"] .rating__item:nth-child(n + 2),
+    &[data-rating-total="5"] .rating__item:nth-child(n + 1) {
+        color: #00ac4e;
+    }
+}
+.rating__item {
+    color: #ebebeb;
+
+    &:hover,
+    &:hover ~ & {
+        color: #00ac4e;
+    }
+
+    span {
+        margin-right: 3px;
+        font-size: 20px;
+    }
+}
+
+// стили для ToggleSlide самописный
+._toggle-content,
+._toggle-hover-content {
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+._toggle-content:not(._active),
+._toggle-hover-content:not(._active) {
+    display: none;
+}
+
+// все что выше может переноситься в сборку галпа
+//###############################
+body {
+    font-family: TTNormsPro;
+    min-height: 100vh;
+    font-size: 14px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+._container {
+    width: 100%;
+    max-width: 1054px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media screen and (max-width: $mb4 + px) {
+        padding: 0 15px;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 500;
+    color: #fff;
+    background: #00ac4e;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @media screen and (min-width: $mb5 + px) {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+}
+
+.icon {
+    color: #00ac4e;
+    font-size: 30px;
+}

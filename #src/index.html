@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+	<!-- header -->
+	@@include("_header.html")
+
+	<main class="page">
+		<div class="_container">
+			<!-- слайдер вверху страницы -->
+			<div class="page__mainslider mainslider swiper-container" id="mainslider">
+				<div class="mainslider__wrapper swiper-wrapper">
+					<div class="mainslider__item swiper-slide">
+						<div class="mainslider__promo promo">
+							<div class="promo__column promo__column--text">
+								<div class="promo__title">Подарок на первый заказ.</div>
+								<div class="promo__descr">Получите 500 рублей за подписку на рассылку</div>
+								<button class="promo__btn btn">Подписаться</button>
+							</div>
+							<div class="promo__column promo__column--image">
+								<img src="./img/mainslider/01.png" alt="food">
+							</div>
+						</div>
+					</div>
+					<div class="mainslider__item swiper-slide">
+						<div class="mainslider__promo promo">
+							<div class="promo__column promo__column--text">
+								<div class="promo__title">Подарок на первый заказ.</div>
+								<div class="promo__descr">Получите 500 рублей за подписку на рассылку</div>
+								<button class="promo__btn btn">Подписаться</button>
+							</div>
+							<div class="promo__column promo__column--image">
+								<img src="./img/mainslider/01.png" alt="food">
+							</div>
+						</div>
+					</div>
+					<div class="mainslider__item swiper-slide">
+						<div class="mainslider__promo promo">
+							<div class="promo__column promo__column--text">
+								<div class="promo__title">Подарок на первый заказ.</div>
+								<div class="promo__descr">Получите 500 рублей за подписку на рассылку</div>
+								<button class="promo__btn btn">Подписаться</button>
+							</div>
+							<div class="promo__column promo__column--image">
+								<img src="./img/mainslider/01.png" alt="food">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="mainslider__swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- Категории -->
+		<div class="page__category category">
+			<div class="_container">
+				<div class=" swiper-container " id="category">
+					<div class="category__wrapper swiper-wrapper">
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="01"><span class="menu__icon icon-soup2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>Супы</a> </div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="02"><span class="menu__icon icon-khachapuri"></span>Хачапури</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="03"><span class="menu__icon icon-cold-snacks"></span>Холодные закуски</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="05"><span class="menu__icon icon-khinkali"></span>Хинкали</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="04"><span class="menu__icon icon-kebab"></span>Шашлык</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="06"><span class="menu__icon icon-sauce"></span>Соусы</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="03"><span class="menu__icon icon-salad"></span>Салаты</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="10"><span class="menu__icon icon-hot-dishes"></span>Горячие блюда</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="08"><span class="menu__icon icon-garnish"></span>Гарнир</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="09"><span class="menu__icon icon-dessert"></span>Десерты</a></div>
+						<div class="category__item swiper-slide"><a href="#category-body" data-category="07"><span class="menu__icon icon-drinks"></span>Напитки</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="_container">
+			<!-- Секции товаров -->
+			<!-- Акции  -->
+			<section class="page_section section">
+				<h3 class="section__title page-title">Акции</h3>
+				<div class="section__items swiper-container">
+					<div class="section__wrapper swiper-wrapper" id="promo-section__wrapper">
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<!-- Add pagination -->
+					<div class="section__pagination"></div>
+				</div>
+			</section>
+			<!-- Новинки  -->
+			<section class="page_section section">
+				<h3 class="section__title page-title">Новинки</h3>
+				<div class="section__items swiper-container">
+					<div class="section__wrapper swiper-wrapper" id="new-roducts-section__wrapper">
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<!-- Add pagination -->
+					<div class="section__pagination"></div>
+				</div>
+			</section>
+			<!-- Рекоминдации  -->
+			<section class="page_section section">
+				<h3 class="section__title page-title">Рекоминдации</h3>
+				<div class="section__items swiper-container">
+					<div class="section__wrapper swiper-wrapper" id="recommends-section__wrapper">
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+						<div class="section__item swiper-slide">
+							<div class="product-card">
+								<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+								<div class="product-card__name">Голень Говядины</div>
+								<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<!-- Add pagination -->
+					<div class="section__pagination"></div>
+				</div>
+			</section>
+
+			<div class="page__category-body category-body" id="category-body">
+				<div class="category-body__title page-title">Все Категории</div>
+				<div class="category-body__content" id="category-body__content">
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__bottom">
+								<div class="product-card__rating rating" data-rating-total="4">
+									<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+									<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+								</div>
+								<div class="product-card__cost ">
+									<span class="product-card__cost__price _rub-kg">1 050</span>
+									<span class="product-card__cost__weight">За 500гр.</span>
+								</div>
+								<button class="product-card__cart btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+					<div class="category-body__item">
+						<div class="product-card">
+							<div class="product-card__image"><img src="./img/product/01.png" alt=""></div>
+							<div class="product-card__name">Голень Говядины</div>
+							<div class="product-card__description">Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.</div>
+							<div class="product-card__rating rating" data-rating-total="4">
+								<div class="rating__item" data-rating-item="5"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="4"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="3"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="2"><span class="icon-star"></span></div>
+								<div class="rating__item" data-rating-item="1"><span class="icon-star"></span></div>
+							</div>
+							<div class="product-card__cost ">
+								<span class="product-card__cost__price _rub-kg">1 050</span>
+								<span class="product-card__cost__weight">За 500гр.</span>
+							</div>
+							<button class="product-card__cart btn">В корзину</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="page__about about">
+			<div class="about__container _container">
+				<div class="about__title page-title">О нас</div>
+				<div class="about__video">
+					<img src="./img/video.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="page__promo-delivery promo-delivery">
+			<div class="_container">
+				<div class="promo-delivery__content">
+					<div class="promo-delivery__column promo-delivery__column--body">
+						<div class="promo-delivery__text">
+							Бесплатная доставка по Москве и Области от <span>2999 RUB!</span>
+						</div>
+						<div class="promo-delivery__btn btn">Оформить</div>
+					</div>
+					<div class="promo-delivery__column promo-delivery__column--image">
+						<img src="./img/car.png" alt="car   ">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</main>
+
+	<!-- footer -->
+	@@include("_footer.html")
+
+	<!-- js -->
+	@@include("_js.html")
+</body>
+
+</html>

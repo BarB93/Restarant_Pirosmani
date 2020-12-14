@@ -1,0 +1,173 @@
+.footer {
+    color: #fff;
+    font-size: 12px;
+    background: #00ac4e;
+    border-radius: 8px;
+    padding: 25px 0;
+
+    @media screen and (min-width: $mb2 + px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: $mb3 + px) {
+        padding: 30px 0;
+    }
+    @media screen and (min-width: $mb5 + px) {
+        font-size: 14px;
+    }
+
+    &__wrapper {
+        margin-bottom: 20px;
+        @media screen and (min-width: $mb4 + px) {
+            display: flex;
+        }
+    }
+
+    .footer-contact {
+        display: flex;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $mb4 + px) {
+            flex: 1 1 40%;
+            display: block;
+            margin-right: 30px;
+        }
+
+        @media screen and (min-width: $mb4 + px) {
+            flex: 1 1 auto;
+            display: block;
+            margin-right: 30px;
+        }
+
+        &__item {
+            flex: 1 1 50%;
+        }
+
+        &-phones {
+            @media screen and (min-width: 615px) {
+                justify-content: flex-start;
+            }
+
+            @media screen and (min-width: $mb4 + px) {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            .footer-contact-phone {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                @media screen and (min-width: 615px) {
+                    &:first-child {
+                        margin-right: 50px;
+                    }
+                }
+                @media screen and (min-width: $mb4 + px) {
+                    &:first-child {
+                        margin-right: 25px;
+                    }
+                }
+
+                &__number {
+                    font-size: 14px;
+                    @media screen and (min-width: $mb2 + px) {
+                        font-size: 18px;
+                    }
+                    @media screen and (min-width: $mb3 + px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &-other {
+            &__email {
+                margin-bottom: 20px;
+                @media screen and (min-width: $mb4 + px) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        @media screen and (min-width: $mb3 + px) {
+            flex: 1 1 40%;
+            display: flex;
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        margin-bottom: 15px;
+        @media screen and (min-width: $mb3 + px) {
+            flex: 1 1 auto;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: $mb4 + px) {
+            display: block;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &__item {
+            flex: 1 1 50%;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            @media screen and (min-width: $mb4 + px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .footer-login {
+        margin-bottom: 25px;
+        white-space: nowrap;
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+
+    .footer-copyright {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and(max-width: 375px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: $mb4 + px) {
+            justify-content: flex-start;
+        }
+        &__item {
+            font-size: 8px;
+
+            @media screen and (min-width: 420px) {
+                font-size: 10px;
+            }
+            @media screen and (min-width: $mb4 + px) {
+                font-size: 12px;
+            }
+
+            @media screen and(max-width: 375px) {
+                flex: 1 1 50%;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+        .footer-copyright__item + .footer-copyright__item {
+            margin-left: 20px;
+
+            @media screen and (min-width: $mb4 + px) {
+                margin-left: 30px;
+            }
+
+            @media screen and(max-width: 375px) {
+                margin-left: 0;
+            }
+        }
+    }
+}

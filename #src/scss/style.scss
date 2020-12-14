@@ -1,0 +1,13 @@
+//mixins
+@import "mixins";
+//fonts
+@import "fonts";
+@import "iconsFont";
+
+@import "vars";
+@import "global";
+
+//blocks
+@import "./blocks/header";
+@import "./blocks/page";
+@import "./blocks/footer";
