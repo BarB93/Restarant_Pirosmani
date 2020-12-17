@@ -25,8 +25,7 @@ let path = {
         scss: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        //json можно удалить
-        json: source_folder + "/*.json",
+
     },
 
     clean: "./" + project_folder + "/"
@@ -110,7 +109,7 @@ function css() {
         .pipe(browsersync.stream())
 }
 
-//json можно удалить
+
 // JS
 function js() {
     src([source_folder + "/js/libs.min.js",
@@ -155,6 +154,8 @@ function images() {
         .pipe(browsersync.stream())
 }
 
+
+// <-- func для формирования файла стилей для подключение шрифтов
 function fontsStyle(params) {
     let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
     if (file_content == '') {
@@ -174,10 +175,8 @@ function fontsStyle(params) {
         })
     }
 }
-
-function cb() {
-
-}
+function cb() { }
+// -->
 
 // WATCH FILES
 function watchFiles(params) {
@@ -236,13 +235,12 @@ function clean(param) {
 }
 
 //json можно удалить
-let build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, json), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
 exports.fontsStyle = fontsStyle;
-//json можно удалить
-exports.json = json;
+
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
@@ -253,9 +251,9 @@ exports.watch = watch;
 exports.default = watch;
 
 
-//outer libs js plagins and css
+//outer libs js plagins and css, таск для компоновки стилей и скриптов разных библиотек
 gulp.task("libs", function () {
-    //libs css
+    //libs css, формирует отдельный файл css,собирая их из указанных ниже стилей плагинов и библиотек
     src(["./node_modules/swiper/swiper-bundle.css",
 
 
