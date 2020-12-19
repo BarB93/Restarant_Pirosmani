@@ -67,7 +67,7 @@ window.onload = function () {
     //<--################## 
     // Слайдеры
     {
-
+        //<--################## 
         //Описание:подключаем Swiper к mainslider
         let mainslider = document.getElementById("mainslider")
 
@@ -85,7 +85,6 @@ window.onload = function () {
         let sectionsliders = document.querySelectorAll(".section__items")
 
         if (sectionsliders) {
-
 
             for (let el of sectionsliders) {
                 let paginationContainer = el.querySelector(".section__pagination")
@@ -191,8 +190,7 @@ window.onload = function () {
 
         toggle()
 
-    }
-    //###-->
+    }//###-->
 
 
     //<--##################
@@ -277,13 +275,7 @@ window.onload = function () {
         })
     }
     // ###-->
-
-
-
-
-
 }
-
 
 //Functions
 //------------------------------------------------------------------
@@ -398,7 +390,6 @@ function renderProducts(data) {
 
 }//-->
 
-
 // <--func
 // получить высоту меню при фиксированной позиции( высота у него меняется в зависимостиот от ширины окна браузера)
 function getHeightFixedMenu() {
@@ -412,7 +403,6 @@ function getHeightFixedMenu() {
     return heightResult
 }//-->
 
-
 // высчитываем высоту верхнего меню при фикседе состоящее из .header и .categories, чтобы при скроле учитывать размеры
 function getSumHeightMenuAndCategory(marintTop = 10) {
     let heightHeader = +document.querySelector(".header").offsetHeight
@@ -420,7 +410,6 @@ function getSumHeightMenuAndCategory(marintTop = 10) {
 
     return heightHeader + heightCategoryMenu + marintTop;
 }
-
 
 // <-- func
 //функция для подсчета расттояний, возращает объект с расстояниями от элемента до верха и левой стороны window
@@ -450,7 +439,6 @@ function setStarRaitngBehavior() {
     });
 
 }// -->
-
 
 // <-- func
 function getOffsetFromTopWindowToBottomCategory() {

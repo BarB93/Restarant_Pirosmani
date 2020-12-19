@@ -184,7 +184,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.scss], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
-    gulp.watch([path.watch.json], json);
+
 }
 
 // FONTS convert ttf to (woff,woff2)
