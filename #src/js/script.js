@@ -2,6 +2,8 @@ window.onload = function () {
     @@include('_webpcss.js');
     @@include('_my.js');
 
+
+
     //<--##################
     //Описание:реализация фунцкионала выезда и скрытия меню при помощи бургера
     let burger = document.getElementById("burger")
@@ -45,7 +47,7 @@ window.onload = function () {
             window.addEventListener('scroll', function () {
                 //расстояние от верха сайта до верха текущего вьюпорта
                 offsetTop = window.scrollY;
-                console.log(offsetFromPageTopToBottomCategory > offsetTop ? (getHeightFixedMenu() + getSumHeightMenuAndCategory()) : getHeightFixedMenu())
+
                 //фиксация меню при скроле
                 fixMenu()
             })
@@ -192,18 +194,19 @@ window.onload = function () {
 
     }//###-->
 
-
+    let $categoryItems = null
     //<--##################
     //Описание:формирование и рендер карточек товара, 1)запрос на сервер, получаем данные о товарах и 2)после вызываем функцию рендера 
     {
         fetch('https://barovskiy777.github.io/site/catalog.json')
             .then(r => r.json())
-            .then(r => {
+            .then(data => {
 
                 //рендерим товары на страницу
-                renderProducts(r)
-                //добавляем поведение звездам рейтинка в карточках товара
-                setStarRaitngBehavior()
+                renderProducts(data)
+                $categoryItems = document.querySelectorAll(".category-body__item")
+                puginationProducts()
+
 
             })
             .catch(function (error) {
@@ -218,6 +221,8 @@ window.onload = function () {
     const categoryMenuItems = document.querySelectorAll('a[href*="#category"')
     //контаинер для заголовока категории,для динамического добавления
     const $categoryTitle = document.querySelector('.category-body__title')
+    //контаинер для добавление товаров
+    const $categoryBody = document.querySelector('#category-body__content')
 
 
     if (categoryMenuItems) {
@@ -234,7 +239,10 @@ window.onload = function () {
                 $categoryTitle.innerHTML = el.innerText.toLowerCase()
 
                 //карточки, товары 
-                const $categoryItems = document.querySelectorAll(".category-body__item")
+                $categoryBody.innerHTML = ""
+                for ($item of $categoryItems) {
+                    $categoryBody.appendChild($item)
+                }
 
                 //реализация фильтрации
                 Array.prototype.forEach.call($categoryItems, (item) => {
@@ -248,7 +256,10 @@ window.onload = function () {
                     else {
                         item.classList.remove("_active")
                     }
+
                 })
+
+                puginationProducts(el.dataset.category)
 
                 //контайнер для карточек товара
                 let $targetBlock = document.querySelector(el.getAttribute("href")),
@@ -256,7 +267,7 @@ window.onload = function () {
                     topOffset = getHeightFixedMenu(),
                     elementPosition = $targetBlock.getBoundingClientRect().top,
                     offsetPosition = elementPosition - topOffset
-
+                // поправка на уменьшение размера фиксированного верхнего меню
                 if (!document.querySelector(".header").classList.contains("_active")) offsetPosition -= 150
                 // console.log(offsetPosition)
 
@@ -275,6 +286,8 @@ window.onload = function () {
         })
     }
     // ###-->
+
+
 }
 
 //Functions
@@ -302,7 +315,7 @@ function renderProducts(data) {
     for (key in data) {
         let id = key.substr(0, 2)
 
-        out += `<div class="category-body__item _active" data-product-id="${id}">
+        out += `<div class="category-body__item _active _pagination-item" data-product-id="${id}">
                         <div class="product-card">
                             <div class="product-card__image"><img src="${data[key].image}" alt=""></div>
                             <div class="product-card__name">${data[key].name}</div>
@@ -319,7 +332,7 @@ function renderProducts(data) {
                                     <span class="product-card__cost__price _rub">${data[key].price}</span>
                                     <span class="product-card__cost__weight">За ${data[key].quantity}${data[key].measurement}.</span>
                                 </div>
-                                <button class="product-card__cart btn">В корзину</button>
+                                <button class="product-card__cart btn" data-articul='${key}'>В корзину</button>
                             </div>
                         </div>
                     </div>`
@@ -344,7 +357,7 @@ function renderProducts(data) {
                             <span class="product-card__cost__price _rub">${data[key].price}</span>
                             <span class="product-card__cost__weight">За ${data[key].quantity}${data[key].measurement}.</span>
                         </div>
-                        <button class="product-card__cart btn">В корзину</button>
+                        <button class="product-card__cart btn" data-articul='${key}'>В корзину</button>
                     </div>
                 </div>
             </div>`
@@ -370,7 +383,7 @@ function renderProducts(data) {
                             <span class="product-card__cost__price _rub">${data[key].price}</span>
                             <span class="product-card__cost__weight">За ${data[key].quantity}${data[key].measurement}.</span>
                         </div>
-                        <button class="product-card__cart btn">В корзину</button>
+                        <button class="product-card__cart btn" data-articul='${key}'>В корзину</button>
                     </div>
                 </div>
             </div>`
@@ -378,14 +391,17 @@ function renderProducts(data) {
 
     }
 
-    //заполняем общий контаинер товаров
+    //заполняем общий контейнер товаров
     $bodyCategoriesContainer.innerHTML = out
     // заполнняем слайдер промо
     $promoContainer.innerHTML = promo
     // заполнняем слайдер новинок
     $newProductsContainer.innerHTML = newProduct
-    // заролняем слайдер рекоментаций
+    // заролняем слайдер рекомендаций
     $recommendsContainer.innerHTML = promo
+
+    //добавляем поведение звездам рейтинка в карточках товара
+    setStarRaitngBehavior()
 
 
 }//-->
@@ -449,6 +465,10 @@ function getOffsetFromTopWindowToBottomCategory() {
     //расстояние от верха страница до низа элемента категорий
     return categoryOfTop + categoryHeight
 }//-->
+
+@@include('_pagination.js');
+
+
 
 
 

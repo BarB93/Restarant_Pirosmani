@@ -256,7 +256,6 @@ gulp.task("libs", function () {
     //libs css, формирует отдельный файл css,собирая их из указанных ниже стилей плагинов и библиотек
     src(["./node_modules/swiper/swiper-bundle.css",
 
-
     ])
         .pipe(concat("libs.css"))
         .pipe(clean_css())
