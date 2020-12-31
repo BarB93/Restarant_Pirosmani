@@ -234,7 +234,7 @@ function clean(param) {
     return del(path.clean);
 }
 
-//json можно удалить
+
 let build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
